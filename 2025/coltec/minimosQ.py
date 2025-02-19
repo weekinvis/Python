@@ -44,9 +44,7 @@ def main():
     for i in range(num):
         pontos[i][X] = float(input("X %i: "% (i + 1)))
         pontos[i][Y] = float(input("Y %i: "% (i + 1)))
-        plt.plot(pontos[i][X], pontos[i][Y], 'o')
-    
-    print(pontos)
+        plt.plot(pontos[i][X], pontos[i][Y], 'o', color = 'blue')
 
     mediaX = calculaMediaX(num, pontos)
     mediaY = calculaMediaY(num, pontos)
@@ -56,7 +54,7 @@ def main():
     a = Sxy / Sxx
     b = mediaY - (mediaX * a)
     
-    plt.plot([pontos[0][X], pontos[num - 1][X]], [(pontos[0][X] * a + b), (pontos[num - 1][X] * a + b)], color = 'red', linestyle = 'solid')
+    plt.plot([pontos[0][X], pontos[num - 1][X]], [(pontos[0][X] * a + b), (pontos[num - 1][X] * a + b)], color = 'black', linestyle = 'solid')
     plt.grid()
     plt.show()
 

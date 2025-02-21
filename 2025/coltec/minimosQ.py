@@ -46,6 +46,8 @@ def main():
         pontos[i][Y] = float(input("Y %i: "% (i + 1)))
         plt.plot(pontos[i][X], pontos[i][Y], 'o', color = 'blue')
 
+    pontos.sort(axis=0)
+    
     mediaX = calculaMediaX(num, pontos)
     mediaY = calculaMediaY(num, pontos)
     Sxy = calculaSxy(num, pontos, mediaX, mediaY)
@@ -60,6 +62,4 @@ def main():
 
     print(mediaX, mediaY, Sxy, Sxx)
     
-       
-
 main()

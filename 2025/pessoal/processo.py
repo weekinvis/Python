@@ -1,7 +1,7 @@
-import re
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
 import numpy as np
+import re
 
 grauPolinomio = 1
 
@@ -63,6 +63,11 @@ plt.xticks(np.arange(df_txt["Ano"].min() - 1, df_txt["Ano"].max() + 2, 1))
 plt.plot(df_txt['Ano'].max() + 1, polinomioCorte(df_txt['Ano'].max() + 1), 'bx', label='Nota de corte prevista para o proximo ano')
 plt.plot(df_txt['Ano'].max() + 1, polinomioMax(df_txt['Ano'].max() + 1), 'rx', label='Nota de maxima prevista para o proximo ano')
 plt.plot(df_txt['Ano'].max() + 1, polinomioMedia(df_txt['Ano'].max() + 1), 'kx', label='Nota de media prevista para o proximo ano')
+
+print(polinomioMax(df_txt['Ano'].max() + 1))
+print(polinomioMedia(df_txt['Ano'].max() + 1))
+print(polinomioCorte(df_txt['Ano'].max() + 1))
+
 plt.grid(True)
 plt.legend()
 plt.show()
